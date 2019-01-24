@@ -93,7 +93,7 @@
 (defconst handlebars-mode-section (concat "\\({{[#^/]\s*"
                                    handlebars-mode-handlebars-token
                                    "[^}]*}}\\)"))
-(defconst handlebars-mode-open-section (concat "\\({{#\s*"
+(defconst handlebars-mode-open-section (concat "\\({{[#^]\s*"
                                         handlebars-mode-handlebars-token
                                         "[^}]*}}\\)"))
 (defconst handlebars-mode-close-section (concat "{{/\\(\s*"
