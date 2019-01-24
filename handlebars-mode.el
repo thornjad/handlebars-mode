@@ -99,8 +99,7 @@
 (defconst handlebars-mode-close-section (concat "{{/\\(\s*"
                                          handlebars-mode-handlebars-token
                                          "\s*\\)}}"))
-;; TODO(tonyg) Figure out a way to support multiline comments.
-(defconst handlebars-mode-comment "\\({{!.*?}}\\)")
+(defconst mustache-mode-comment "\\({{!\\(?:.\\|\n\\)*?}}\\)")
 (defconst handlebars-mode-include (concat "\\({{[><]\s*"
                                    handlebars-mode-handlebars-token
                                    "\s*}}\\)"))
