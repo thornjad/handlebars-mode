@@ -91,31 +91,31 @@
 ;; Constant regular expressions to identify template elements.
 (defconst handlebars-mode-handlebars-token "\\([a-zA-Z_.][a-zA-Z0-9_:=\?!.-]*\s+\\)*[a-zA-Z_.][a-zA-Z0-9_:=\?!.-]*")
 (defconst handlebars-mode-section (concat "\\({{[#^/]\s*"
-                                   handlebars-mode-handlebars-token
-                                   "[^}]*}}\\)"))
+																					handlebars-mode-handlebars-token
+																					"[^}]*}}\\)"))
 (defconst handlebars-mode-open-section (concat "\\({{[#^]\s*"
-                                        handlebars-mode-handlebars-token
-                                        "[^}]*}}\\)"))
+																							 handlebars-mode-handlebars-token
+																							 "[^}]*}}\\)"))
 (defconst handlebars-mode-close-section (concat "{{/\\(\s*"
-                                         handlebars-mode-handlebars-token
-                                         "\s*\\)}}"))
+																								handlebars-mode-handlebars-token
+																								"\s*\\)}}"))
 (defconst mustache-mode-comment "\\({{!\\(?:.\\|\n\\)*?}}\\)")
 (defconst handlebars-mode-include (concat "\\({{[><]\s*"
-                                   handlebars-mode-handlebars-token
-                                   "\s*}}\\)"))
+																					handlebars-mode-handlebars-token
+																					"\s*}}\\)"))
 (defconst handlebars-mode-variable (concat "\\({{\s*"
-                                    handlebars-mode-handlebars-token
-                                    "\s*}}\\)"))
+																					 handlebars-mode-handlebars-token
+																					 "\s*}}\\)"))
 (defconst handlebars-mode-variable (concat "\\({{{?\s*"
-                                    handlebars-mode-handlebars-token
-                                    "\s*}}}?\\)"))
+																					 handlebars-mode-handlebars-token
+																					 "\s*}}}?\\)"))
 (defconst handlebars-mode-else (concat "\\({{\s*else[^}]*}}\\)"))
 (defconst handlebars-mode-variable-path (concat "\\({{\s*./\s*"
-                                    handlebars-mode-handlebars-token
-                                    "\s*}}\\)"))
+																								handlebars-mode-handlebars-token
+																								"\s*}}\\)"))
 (defconst handlebars-mode-variable-path-parent (concat "\\({{\s*../\s*"
-                                    handlebars-mode-handlebars-token
-                                    "\s*}}\\)"))
+																											 handlebars-mode-handlebars-token
+																											 "\s*}}\\)"))
 (defconst handlebars-mode-builtins
   (concat
    "\\({{\\<\s*"
@@ -124,7 +124,7 @@
     t)
    "\s*\\>}}\\)"))
 (defconst handlebars-mode-close-section-at-start (concat "^[ \t]*?"
-                                                  handlebars-mode-close-section))
+																												 handlebars-mode-close-section))
 
 ;; Constant regular expressions to identify html tags.
 ;; Taken from HTML 4.01 / XHTML 1.0 Reference found at:
@@ -155,21 +155,21 @@
     t)
    "\\>"))
 (defconst handlebars-mode-open-tag (concat "<\\("
-                                    handlebars-mode-pair-tag
-                                    "\\)"))
+																					 handlebars-mode-pair-tag
+																					 "\\)"))
 (defconst handlebars-mode-close-tag (concat "</\\("
-                                     handlebars-mode-pair-tag
-                                     "\\)>"))
+																						handlebars-mode-pair-tag
+																						"\\)>"))
 (defconst handlebars-mode-close-tag-at-start (concat "^[ \t]*?"
-                                              handlebars-mode-close-tag))
+																										 handlebars-mode-close-tag))
 
 (defconst handlebars-mode-blank-line "^[ \t]*?$")
 (defconst handlebars-mode-else-line "^[ \t]*?{{[ \t]*?else[^}]*?}}")
 (defconst handlebars-mode-dangling-open (concat "\\("
-                                         handlebars-mode-open-section
-                                         "\\)\\|\\("
-                                         handlebars-mode-open-tag
-                                         "\\)[^/]*$"))
+																								handlebars-mode-open-section
+																								"\\)\\|\\("
+																								handlebars-mode-open-tag
+																								"\\)[^/]*$"))
 
 (defun handlebars-insert-tag (tag)
   "Inserts an HTML tag."
