@@ -1,0 +1,4 @@
+Handlebars Mode
+
+Provides font lock and indentation for Handlebars templates. Add the mode to
+your load path, then use `(require 'handlebars-mode)`
