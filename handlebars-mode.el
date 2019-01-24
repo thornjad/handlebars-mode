@@ -2,7 +2,7 @@
 
 ;; Author: Jade Michael Thornton
 ;;
-;; Version: 1.0
+;; Version: 1.0.4
 
 ;; This file is not part of GNU Emacs
 
@@ -62,7 +62,7 @@
 
 
 
-(defvar handlebars-mode-version "1.3"
+(defvar handlebars-mode-version "1.0.4"
   "Version of `handlebars-mode.el'.")
 
 ;; TODO: this keystrokes should be altered to avoid conflict with mustache-mode
